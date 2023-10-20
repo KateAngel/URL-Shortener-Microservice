@@ -8,9 +8,6 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 const dns = require('dns');
 
-// Basic Configuration
-const port = process.env.PORT || 3000;
-
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -131,6 +128,6 @@ app.get('/api/shorturl/:shortUrl', (req, res) => {
 });
 
 
-app.listen(port, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log(`Listening on port ${port}`);
 });
