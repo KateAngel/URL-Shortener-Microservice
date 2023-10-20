@@ -128,6 +128,6 @@ app.get('/api/shorturl/:shortUrl', (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 3000, function() {
+var listener = app.listen(process.env.PORT || 3000, function() {
   console.log('Listening on port http://localhost:' + listener.address().port);
 });
